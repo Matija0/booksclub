@@ -30,9 +30,10 @@ const Main = () => {
               </div>
              </div>
         </header>
-        <div className=' container  mx-auto'>
-          <div className='grid grid-cols-4 gap-4'>
+        <div className=' container  mx-auto pb-9'>
+          <div className='grid grid-cols-4 gap-4 '>
             {
+              
               <BookList book={data} />
             }
           </div>
