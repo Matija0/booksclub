@@ -1,0 +1,13 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 10px;
+    justify-content: end;
+    padding: 20px;
+}
+
+.nav > h1:hover {
+    cursor: pointer;    
+    color: gray;
+}
