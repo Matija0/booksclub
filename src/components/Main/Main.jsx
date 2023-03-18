@@ -3,6 +3,7 @@ import "./Main.css"
 import axios from 'axios';
 import BookList from '../BookList/BookList';
 
+
 const Main = () => {
    const KEY= "AIzaSyDClgLVH9leBAUobjdreNkj6aQJDem4yDU" 
    const URL= "https://www.googleapis.com/books/v1/volumes?q="
@@ -10,10 +11,12 @@ const Main = () => {
    const [data, setData]= useState([])
    const searchBook=(e)=>{
        e.preventDefault();
-        axios.get(`${URL}${search}&key=${KEY}`).then(res=>setData(res.data.items)).catch(err=>console.log(err))
+        axios.get(`${URL}${search}&key=${KEY}&maxResults=30`).then(res=>setData(res.data.items)).catch(err=>console.log(err))
         
    } 
    console.log(data)
+   
+
   return (
     <div className='main'>
         <div className='holder'>
@@ -25,7 +28,7 @@ const Main = () => {
               <div className='search-form'>
                 <form className='form-el' onSubmit={searchBook} >
                     <input className='input' placeholder='The lost World...' type="text" value={search} onChange={e=>setSearch(e.target.value)}  />
-                    <button type='submit' className='btn'>SEARCH</button>
+                    <button type='submit' className=' bg-gray-800 border-none rounded-xl text-white hover:bg-gray-700 py-3 px-4 mt-4'>SEARCH</button>
                 </form>
               </div>
              </div>
