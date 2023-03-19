@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import "./BookList.css";
 
@@ -13,7 +13,7 @@ const BookList = ({ book }) => {
           return (
             <>
               <Link to={`/book/${item.id}`}>
-                <div className="list-item shadow-lg pt-2 px-3 pb-1 mt-4">
+                <div className="list-item shadow-lg pt-2 px-3 pb-1 mt-4" key={item.id}>
                   <img className=" h-4/6" src={thumbnail} alt="" />
                   <div className="mt-3">
                     <h1 className="font-bold text-lg mr-2">

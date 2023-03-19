@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes,  useParams } from "react-router-dom";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
+import Library from "./pages/Library/Library"
 import BookList from "./components/BookList/BookList"
 import BookDetails from "./pages/BookDetails/BookDetails";
 import "./index.css"
