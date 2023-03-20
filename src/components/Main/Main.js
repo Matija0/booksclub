@@ -44,10 +44,10 @@ const Main = () => {
             </div>
           </div>
         </header>
-        {loader ? (<div className=" bg-white container mx-auto mt-12 flex flex-row justify-center"><img className=" w-1/4" src={Loader} /></div>) : null}
+        {loader ? (<div className=" bg-white container mx-auto mt-12 flex flex-row justify-center"><img className=' w-20'  src={Loader} /></div>) : null}
 
         <div className=' container  mx-auto pb-9'>
-          <div className='flex flex-row flex-wrap gap-5'>
+          <div className="grid grid-cols-4 gap-4">
             {
 
               <BookList book={data} />

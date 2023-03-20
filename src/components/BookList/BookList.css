@@ -3,7 +3,7 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    
     transition: transform 450ms;
    
 }

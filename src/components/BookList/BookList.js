@@ -5,7 +5,7 @@ import "./BookList.css";
 
 const BookList = ({ book }) => {
   const [library, setLibrary] = useState([])
-  console.log(library, "lib")
+  
   const add = (val) => {
     if (Object.keys(library) === 0) {
       setLibrary(val)
@@ -31,7 +31,7 @@ const BookList = ({ book }) => {
         if (thumbnail !== undefined) {
           return (
             <>
-
+              
               <div className="list-item shadow-lg pt-2 px-3 pb-1 mt-4" key={item.id}>
                 <img className=" h-4/6" src={thumbnail} alt="" />
                 <div className="mt-3">
@@ -47,11 +47,13 @@ const BookList = ({ book }) => {
                       {item.volumeInfo.authors[0]}
                     </span>
                   </h3>
+                  <button className=" bg-slate-300 w-2/4 py-1 px-2 rounded-full hover:bg-slate-200" onClick={() => add(item)}><i class="bi bi-bookmark-check"></i></button>
+                  <Link to={`/book/${item.id}`}> VIEW</Link>
                 </div>
-                <button className=" bg-slate-300 w-2/4 py-2 px-3" onClick={() => add(item)}>Add</button>
-                <Link to={`/book/${item.id}`}>view</Link>
+                
+               
               </div>
-
+              
             </>
           );
         }
